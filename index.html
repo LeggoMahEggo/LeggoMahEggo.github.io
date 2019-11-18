@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href="./libs/DataTable/jquery.dataTables.min.css">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="root">
+			<form>
+				<input type="text" id="textToSearch" value="יהודא"><br>
+				<input type="checkbox" id="exactSearch" value="exact" checked> Exact search<br>
+				<input type="checkbox" id="levenshteinSearch" value="levenshtein"> Levenshtein search<br>
+				<input type="checkbox" id="soundexSearch" value="soundex"> Soundex search<br>
+				<select id="lang">
+					<option value="heb" selected>Hebrew</option>
+					<option value="eng">English</option>
+				</select>
+
+			</form>
+		<button id="btn">Search</button>
+		<div id="divResults"></div>
+		<p id="results">
+			<table id="example" class="display" width="100%"></table>
+		</p>
+		</div>
+		<script src="./libs/jquery-3.4.1.js"></script>
+		<script src="./libs/axios.min.js"></script>
+		<script src="./libs/DataTable/jquery.dataTables.min.js"></script>
+        <script src="api.logic.js"></script>
+		<script src="page.logic.js"></script>
+	</body>
+</html>

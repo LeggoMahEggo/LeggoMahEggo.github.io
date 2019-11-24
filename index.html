@@ -8,15 +8,20 @@
 
 	<body>
 		<div id="root">
-			<form>
+			<form id="updateForm">
+				(not implemented) Add/Update database file: <input type="file" name="myFile">
+			</form>
+			<br>
+			<form id="searchForm">
 				<input type="text" id="textToSearch" value="יהודא"><br>
 				<input type="checkbox" id="exactSearch" value="exact" checked> Exact search<br>
-				<input type="checkbox" id="levenshteinSearch" value="levenshtein"> Levenshtein search<br>
+				<input type="checkbox" id="levenshteinSearch" value="levenshtein"> Levenshtein search <input type="number" id="levenshteinScore" step="0.5" min="1.0" value="2.0" style="visibility: hidden" onkeydown="return false"><br>
 				<input type="checkbox" id="soundexSearch" value="soundex"> Soundex search<br>
 				<select id="lang">
 					<option value="heb" selected>Hebrew</option>
 					<option value="eng">English</option>
-				</select>
+				</select><br>
+				
 
 			</form>
 		<button id="btn">Search</button>

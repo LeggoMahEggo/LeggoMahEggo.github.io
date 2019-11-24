@@ -64,7 +64,8 @@ function FootprintsSearch(searchData) {
 	var searchText = searchData["search_text"];//ConvertHebrewToUnicode(searchData["search_text"]);
 	var searchLang = searchData["lang"];
 	var searchTypes = searchData["search_types"];
-	postData = {search_text: searchText, lang: searchLang, search_types: searchTypes};
+	var maxScore = searchData["max_score"];
+	postData = {search_text: searchText, lang: searchLang, search_types: searchTypes, max_score: maxScore};
 	
 	// Make POST request to the server
 	axios.post(masURL, postData).then((response) => {

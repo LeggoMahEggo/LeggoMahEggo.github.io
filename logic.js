@@ -1,7 +1,8 @@
 const RSS_URL = `https://www.bitchute.com/feeds/rss/channel/STYXHEXENHAMMER666/`;
 const RSS_URL2 = `https://www.youtube.com/feeds/videos.xml?channel_id=UC0rZoXAD5lxgBHMsjrGwWWQ`;
+headers = {"Content-Type": "application/rss+xml"}
 
-fetch(RSS_URL)
+fetch(RSS_URL, {method: "GET", headers})
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
   .then(data => {
